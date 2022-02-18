@@ -7,6 +7,9 @@ RUN apt-get install --fix-missing -y wget unzip autoconf pkg-config procps acl
 #zip
 RUN apt-get install -y libzip-dev && docker-php-ext-install zip
 
+#php-bcmath
+RUN docker-php-ext-install bcmath
+
 #xdebug
 ARG XDEBUG_REMOTE_HOST=127.0.0.1
 RUN pecl install xdebug \
