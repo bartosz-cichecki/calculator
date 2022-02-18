@@ -24,7 +24,7 @@ final class Calculator
         $number = new Number($number);
 
         $this->result = new Number(
-            \bcdiv(
+            \bcadd(
                 $this->result->getValue(),
                 $number->getValue(),
                 $this->scale

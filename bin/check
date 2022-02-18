@@ -1,3 +1,5 @@
 #!/bin/bash
 vendor/bin/php-cs-fixer fix src --allow-risky=yes
 vendor/bin/phpstan analyse src --level 9
+vendor/bin/php-cs-fixer fix tests --allow-risky=yes
+vendor/bin/phpstan analyse tests --level 9
