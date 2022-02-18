@@ -11,13 +11,15 @@ final class Calculator
     private int $scale;
     private Number $result;
 
-    public function __construct(int $scale = 2)
-    {
+    public function __construct(
+        mixed $initNumber = 0,
+        int $scale = 2
+    ) {
+        $this->result = new Number($initNumber);
         $this->scale = $scale;
-        $this->result = new Number();
     }
 
-    public function add($number): self
+    public function add(mixed $number): self
     {
         $number = new Number($number);
 

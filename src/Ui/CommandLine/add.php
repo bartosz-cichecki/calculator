@@ -10,10 +10,11 @@ $firsArgument = fgets(STDIN);
 fwrite(STDOUT, "Enter the second argument: \n");
 $secondArgument = fgets(STDIN);
 
-$calculator = new Calculator($firsArgument);
+$calculator = new Calculator();
 $calculator->add($secondArgument);
 
-fwrite(STDOUT,
+fwrite(
+    STDOUT,
     sprintf(
         "Adding result: %s \n",
         $calculator->getResult()

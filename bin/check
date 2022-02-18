@@ -1,0 +1,3 @@
+#!/bin/bash
+vendor/bin/php-cs-fixer fix src --allow-risky=yes
+vendor/bin/phpstan analyse src --level 9
